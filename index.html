@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카톡 공유</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+    <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+    <input type="button" onClick="sendLinkDefault();" value="Default"/>
+
+<script type="text/javascript">
+    function sendLinkCustom() {
+        Kakao.init("6c40080932e89a9f418a9d1ae8bd1d8f");
+        Kakao.Link.sendCustom({
+            templateId: 67036
+        });
+    }
+</script>
+  
+<script type="text/javascript">
+ Kakao.init('6c40080932e89a9f418a9d1ae8bd1d8f');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '이재용♡장지연',
+        description: '2022.02.27. SUN 3:30 PM 저희 결혼합니다.',
+        imageUrl:
+          'https://d36q5o2seairtd.cloudfront.net/client/upload/20211126/1637933515021',
+        link: {
+          mobileWebUrl: 'https://pastelletter.com/Y7I3hyNYE3',
+          webUrl: 'https://pastelletter.com/Y7I3hyNYE3',
+        },
+      },
+      buttons: [
+        {
+          title: '모바일청첩장 보기',
+          link: {
+            mobileWebUrl: 'https://pastelletter.com/Y7I3hyNYE3',
+            webUrl: 'https://pastelletter.com/Y7I3hyNYE3',
+          },
+        },
+      ],
+      buttons: [
+        {
+          title: '백신접종여부 회신하기',
+          link: {
+            mobileWebUrl: 'https://form.office.naver.com/form/responseView.cmd?formkey=NmViNzM5ZGQtNGE2Ni00MWJiLWFmZjItYWFiZjliMGVmYTQ4&sourceId=urlshare',
+            webUrl: 'https://form.office.naver.com/form/responseView.cmd?formkey=NmViNzM5ZGQtNGE2Ni00MWJiLWFmZjItYWFiZjliMGVmYTQ4&sourceId=urlshare',
+          },
+        },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }  
+</script>
+   
+</body>
+</html>
